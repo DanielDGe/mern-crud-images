@@ -33,9 +33,9 @@ app.use(
 console.log(__dirname)
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('*', (req, res) => {
+/* app.get('*', (req, res) => {
     res.sendFile(join(__dirname, '../client/build/index.html'))
-})
+}) */
 
 app.use("/images", express.static(path.join(__dirname, 'public')));
 
