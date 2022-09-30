@@ -19,6 +19,7 @@ export const deleteImage = async (id) => {
 
 export const getImageAttachment = async (id, name_img) => {
     return await cloudinary.url(id, {
+        secure: true,
         flags: `attachment:${name_img}`
     })
 }
